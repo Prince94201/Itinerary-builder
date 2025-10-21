@@ -1,0 +1,303 @@
+/* Custom CSS to replace Tailwind arbitrary colors/gradients which don't work with CDN build */
+
+/* Print styles for PDF generation */
+@media print {
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Page sizing */
+  @page {
+    size: A4;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Main containers */
+  body > div {
+    page-break-inside: avoid;
+    break-inside: avoid;
+    width: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: 100%;
+  }
+  
+  /* Sections with page breaks */
+  section {
+    page-break-inside: avoid;
+    break-inside: avoid;
+    width: 100%;
+  }
+  
+  /* Prevent tables from breaking awkwardly */
+  .overflow-x-auto {
+    page-break-inside: avoid;
+    break-inside: avoid;
+    overflow: visible !important;
+  }
+  
+  .min-w-\[800px\] {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  
+  /* Ensure proper widths */
+  .max-w-\[1400px\],
+  .max-w-\[1300px\] {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* Gradient used in header card */
+.bg-gradient-custom {
+  /* left to right gradient matching from #4BA1EB to #936FE0 */
+  background-image: linear-gradient(90deg, #4BA1EB 0%, #936FE0 100%);
+}
+
+/* Borders and solid background colors used in the markup */
+.border-custom-purple {
+  border-color: #541C9C;
+}
+
+.bg-deep-purple {
+  background-color: #321E5D;
+}
+
+.border-accent-blue {
+  background-color: #2F80ED; /* used as a thin vertical line fill */
+}
+
+.border-deep-purple {
+  border-color: #321E5D;
+}
+
+.border-muted-gray {
+  border-color: #777777;
+}
+
+/* Utility to replace small solid elements that used Tailwind arbitrary hex in classes */
+.bg-accent-blue {
+  background-color: #2F80ED;
+}
+
+/* Fallback text color utilities (if needed) */
+.text-white { color: #fff; }
+
+/* Optional: keep rounded radius utility if project doesn't use Tailwind's JIT for arbitrary values */
+.rounded-30 { border-radius: 30px; }
+
+/* Make sure the custom CSS doesn't override Tailwind defaults unintentionally */
+
+/* Add small helper to ensure gradient clips to rounded corner containers */
+.rounded-gradient {
+  overflow: hidden;
+}
+
+/* Utility for a 3px solid border (replacement for Tailwind's arbitrary `border-[3px]`) */
+.border-3 {
+  border-width: 3px;
+  border-style: solid;
+}
+
+/* Responsive grid helper: at large screens (lg = 1024px) set grid-template-columns: auto 1fr */
+.lg-grid-cols-auto-1fr {
+  grid-template-columns: 1fr; /* default fallback for small screens */
+}
+
+@media (min-width: 1024px) {
+  .lg-grid-cols-auto-1fr {
+    grid-template-columns: auto 1fr;
+  }
+}
+
+/* Import fonts used by markup */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Poppins:wght@400;600;700&family=Red+Hat+Display:wght@400;700&display=swap');
+
+/* Typography helpers */
+.font-roboto { font-family: 'Roboto', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+.font-poppins { font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+
+/* Brand purple palette and related utilities */
+:root {
+  --brand-purple: #541C9C;
+  --brand-purple-dark: #3D1168;
+  --brand-purple-light: #F9EEFF;
+  --brand-purple-darker: #6A2AAE;
+  --divider-color: #E6E6E6;
+}
+
+.text-brand-purple { color: var(--brand-purple); }
+.border-brand-purple-dark { border-color: var(--brand-purple); }
+.bg-brand-purple-light { background-color: var(--brand-purple-light); }
+.bg-brand-purple-darker { background-color: var(--brand-purple-darker); }
+
+.border-divider { border-color: var(--divider-color); }
+
+/* Escaped arbitrary utilities (bracket class names) */
+.max-w-\[1400px\] { max-width: 1400px; }
+.min-w-\[800px\] { min-width: 800px; }
+.leading-\[25px\] { line-height: 25px; }
+.rounded-t-\[45px\] { border-top-left-radius: 45px; border-top-right-radius: 45px; }
+.rounded-b-\[30px\] { border-bottom-left-radius: 30px; border-bottom-right-radius: 30px; }
+
+/* Responsive (md:) variants used in the markup. Tailwind's CDN won't provide arbitrary values with prefixes, so provide them here. */
+@media (min-width: 768px) {
+  .md\:text-\[34px\] { font-size: 34px; }
+  .md\:text-\[26px\] { font-size: 26px; }
+  .md\:grid-cols-\[auto_1fr\] { grid-template-columns: auto 1fr; }
+}
+
+/* small utility sometimes used in markup */
+.text-\[26px\] { font-size: 26px; }
+
+/* Ensure border-3 existing utility behaves as expected (already provided above but keep safe) */
+.border-3 { border-width: 3px; border-style: solid; }
+
+/* Additional arbitrary and responsive utilities used in the Important/Scope/Inclusion sections */
+.min-h-\[82px\] { min-height: 82px; }
+.min-h-\[70px\] { min-height: 70px; }
+.min-w-\[299px\] { min-width: 299px; }
+.min-w-\[800px\] { min-width: 800px; }
+.min-w-\[\3 56px\] { min-width: 56px; } /* fallback for w-56 used in image */
+
+.rounded-tl-\[45px\] { border-top-left-radius: 45px; }
+.rounded-tr-\[45px\] { border-top-right-radius: 45px; }
+.rounded-bl-\[30px\] { border-bottom-left-radius: 30px; }
+.rounded-br-\[30px\] { border-bottom-right-radius: 30px; }
+.rounded-t-\[45px\] { border-top-left-radius: 45px; border-top-right-radius: 45px; }
+.rounded-b-\[30px\] { border-bottom-left-radius: 30px; border-bottom-right-radius: 30px; }
+
+/* grid template for inclusion summary */
+.grid-cols-\[1fr_auto_2fr_1\.5fr\] { grid-template-columns: 1fr auto 2fr 1.5fr; }
+
+/* responsive small/large prefixed arbitrary classes */
+@media (min-width: 640px) {
+  .sm\:text-\[34px\] { font-size: 34px; }
+  .sm\:text-\[26px\] { font-size: 26px; }
+  .sm\:min-h-\[82px\] { min-height: 82px; }
+  .sm\:inline { display: inline; }
+}
+
+@media (min-width: 1024px) {
+  .lg\:rounded-tr-none { border-top-right-radius: 0; }
+  .lg\:rounded-bl-none { border-bottom-left-radius: 0; }
+  .lg\:rounded-l-\[45px\] { border-top-left-radius: 45px; border-bottom-left-radius: 45px; }
+  .lg\:rounded-r-\[45px\] { border-top-right-radius: 45px; border-bottom-right-radius: 45px; }
+  .lg\:grid-cols-\[auto_1fr\] { grid-template-columns: auto 1fr; }
+  .lg\:grid-cols-\[1fr_auto_2fr_1\.5fr\] { grid-template-columns: 1fr auto 2fr 1.5fr; }
+}
+
+/* helper for hidden (used with sm:inline) */
+.hidden { display: none; }
+
+
+/* Payment Plan specific utilities */
+/* additional root variables */
+:root {
+  --brand-gray: #777777;
+  --brand-purple-border: var(--brand-purple);
+}
+
+/* max width specific to the payment container */
+.max-w-\[1300px\] { max-width: 1300px; }
+
+/* min-width utilities used in the payment plan blocks */
+.min-w-\[200px\] { min-width: 200px; }
+@media (min-width: 640px) {
+  .sm\:min-w-\[280px\] { min-width: 280px; }
+}
+@media (min-width: 1024px) {
+  .lg\:min-w-\[314px\] { min-width: 314px; }
+}
+
+/* Responsive width fixes for PDF/Print */
+@media print {
+  .mx-auto {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 100%;
+  }
+  
+  .px-4, .px-6, .px-8, .px-12, .px-16, .px-24,
+  .sm\:px-6, .lg\:px-8, .lg\:px-16, .xl\:px-24 {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+    box-sizing: border-box;
+  }
+  
+  .w-full {
+    width: 100% !important;
+  }
+  
+  /* Ensure grid layouts don't overflow */
+  .grid {
+    width: 100%;
+  }
+  
+  /* Keep overflow hidden elements visible in print */
+  .overflow-hidden,
+  .overflow-x-auto,
+  .overflow-y-auto {
+    overflow: visible !important;
+  }
+  
+  /* Ensure images scale properly */
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+}
+
+/* combined transform when both skew and translate are used */
+.skew-x-\[-20deg\]\.translate-x-6 { transform: skewX(-20deg) translateX(1.5rem); }
+.translate-x-6 { transform: translateX(1.5rem); }
+.skew-x-\[-20deg\] { transform: skewX(-20deg); }
+.w-12 { width: 3rem; }
+
+/* Button / rounded utilities */
+.rounded-\[52px\] { border-radius: 52px; }
+.rounded-\[30px\] { border-radius: 30px; }
+
+/* brand gray and border helper */
+.border-brand-gray { border-color: var(--brand-gray); }
+.border-brand-purple-border { border-color: var(--brand-purple-border); }
+
+/* brand purple backgrounds and hover helper */
+.bg-brand-purple-border { background-color: var(--brand-purple-border); }
+.bg-brand-purple { background-color: var(--brand-purple); }
+.hover\:bg-brand-purple:hover { background-color: var(--brand-purple); }
+
+/* font helper for Red Hat headings used in CTA */
+.font-red-hat { font-family: 'Red Hat Display', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+
+/* small tracking utility */
+.tracking-\[0\.72px\] { letter-spacing: 0.72px; }
+
+/* Activity table specific utilities */
+/* grid with minmax columns used in the Activity table */
+.grid-cols-\[minmax\(140px\,177px\)_minmax\(300px\,1fr\)_minmax\(180px\,204px\)_minmax\(180px\,251px\)\] {
+  grid-template-columns: minmax(140px,177px) minmax(300px,1fr) minmax(180px,204px) minmax(180px,251px);
+}
+
+/* fixed heights used in table headers */
+.h-\[61px\] { height: 61px; }
+
+/* extra padding helper used in Activity column */
+.md\:px-20 { padding-left: 20px; padding-right: 20px; }
+
+/* brand blue used for terms link */
+:root { --brand-blue: #2F80ED; }
+.text-brand-blue { color: var(--brand-blue); }
+
+/* escaped max-width for footer image */
+.max-w-\[230px\] { max-width: 230px; }

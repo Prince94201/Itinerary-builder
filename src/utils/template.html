@@ -1,0 +1,796 @@
+<html>
+
+<head>
+    <title>Hello World</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="./styles.css" rel="stylesheet">
+
+</head>
+
+<body style="margin: 0; padding: 0; width: 100%;">
+    <div class="bg-white" style="width: 100%; page-break-after: always;">
+        <div class=" mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-12" style="width: 100%; box-sizing: border-box;">
+            <div class="mb-8 md:mb-12">
+                <div class="flex justify-center mb-8 md:mb-12"><img
+                        src="https://api.builder.io/api/v1/image/assets/TEMP/e779ce173128b448750f1d5098cb178fb168354e?width=530"
+                        alt="vigovia" class="h-16 md:h-20 lg:h-32 w-auto"></div>
+                <div
+                    class="relative rounded-30 rounded-gradient bg-gradient-custom px-6 py-12 md:px-12 md:py-16 lg:py-20 text-center overflow-hidden">
+                    <div class="relative z-10">
+                        <h1 id="customer-name" class="text-white font-poppins text-3xl md:text-4xl lg:text-5xl font-normal mb-4 md:mb-6">
+                            Hi, Rahul!</h1>
+                        <h2 id="trip-title" class="text-white font-poppins text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4">
+                            Singapore Itinerary</h2>
+                        <p id="trip_duration" class="text-white font-poppins text-2xl md:text-3xl lg:text-[34px] font-normal">4 Days 3
+                            Nights</p>
+                    </div>
+                    <div class="flex justify-center gap-6 md:gap-12 mt-8 md:mt-12"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-plane w-6 h-6 text-white" aria-hidden="true">
+                            <path
+                                d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z">
+                            </path>
+                        </svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" class="lucide lucide-building2 lucide-building-2 w-6 h-6 text-white"
+                            aria-hidden="true">
+                            <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"></path>
+                            <path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"></path>
+                            <path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"></path>
+                            <path d="M10 6h4"></path>
+                            <path d="M10 10h4"></path>
+                            <path d="M10 14h4"></path>
+                            <path d="M10 18h4"></path>
+                        </svg>
+                        <div class="w-6 h-6 text-white"><img
+                                src="https://api.builder.io/api/v1/image/assets/TEMP/a441d2fb145c159127fd74cd820cd5005e33a513?width=45"
+                                alt="Activity" class="w-full h-full"></div><svg xmlns="http://www.w3.org/2000/svg"
+                            width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-car w-6 h-6 text-white" aria-hidden="true">
+                            <path
+                                d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2">
+                            </path>
+                            <circle cx="7" cy="17" r="2"></circle>
+                            <path d="M9 17h6"></path>
+                            <circle cx="17" cy="17" r="2"></circle>
+                        </svg>
+                        <div class="w-7 h-6"><img
+                                src="https://api.builder.io/api/v1/image/assets/TEMP/62cbdc2b2e81b669516932b18067b745a9c08aca?width=60"
+                                alt="Visa" class="w-full h-full"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-2 border-custom-purple rounded-30 bg-white px-6 py-6 md:px-12 md:py-8 mb-8 md:mb-12">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-6 lg:gap-8">
+                    <div class="font-roboto">
+                        <div class="font-bold text-base md:text-xl capitalize leading-8">Departure From :</div>
+                        <div id="departure-from" class="text-base md:text-xl leading-8">Mumbai</div>
+                    </div>
+                    <div class="font-roboto">
+                        <div class="font-bold text-base md:text-xl capitalize leading-8">Departure :</div>
+                        <div id="departure-date" class="text-base md:text-xl leading-8">31/10/2025</div>
+                    </div>
+                    <div class="font-roboto">
+                        <div class="font-bold text-base md:text-xl capitalize leading-8">Arrival :</div>
+                        <div id="arrival-date" class="text-base md:text-xl leading-8">01/11/2025</div>
+                    </div>
+                    <div class="font-roboto">
+                        <div class="font-bold text-base md:text-xl capitalize leading-8">Destination :</div>
+                        <div id="destination" class="text-base md:text-xl leading-8">Singapore</div>
+                    </div>
+                    <div class="font-roboto">
+                        <div class="font-bold text-base md:text-xl capitalize leading-8">No. Of Travellers :</div>
+                        <div id="no_of_travellers" class="text-base md:text-xl leading-8">4</div>
+                    </div>
+                </div>
+            </div>
+            <div class="space-y-8 md:space-y-12">
+                <div id="itinerary-days">
+                    <div class="grid grid-cols-1 lg-grid-cols-auto-1fr gap-6 md:gap-8 lg:gap-12">
+                        <div class="flex flex-row mx-auto items-center lg:items-start gap-4 lg:gap-6">
+                            <div
+                                class="flex-shrink-0 w-16 h-48 md:h-64 lg:h-80 bg-deep-purple rounded-30 flex items-center justify-center">
+                                <div class="transform -rotate-90 whitespace-nowrap"><span
+                                        class="text-white font-roboto text-2xl md:text-[26px] font-bold">Day 1</span>
+                                </div>
+                            </div>
+                            <div class="flex flex-col items-center text-center">
+                                <div
+                                    class="w-40 h-40 md:w-52 md:h-52 lg:w-56 lg:h-56 rounded-full overflow-hidden mb-4">
+                                    <img src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=500&amp;q=80"
+                                        alt="Arrival in Singapore &amp; City Exploration"
+                                        class="w-full h-full object-cover">
+                                </div>
+                                <h3 class="font-roboto text-xl md:text-2xl lg:text-[26px] font-bold mb-2">27th November
+                                </h3>
+                                <p class="font-roboto text-lg md:text-xl max-w-[299px]">Arrival in Singapore &amp; City
+                                    Exploration</p>
+                            </div>
+                        </div>
+                        <div class="relative pl-8 md:pl-12 lg:pl-16">
+                            <div class="absolute left-2 md:left-4 lg:left-6 top-4 bottom-4 w-1 bg-accent-blue"></div>
+                            <div
+                                class="absolute left-0 md:left-2 lg:left-4 top-6 w-4 h-4 rounded-full bg-white border-3 border-deep-purple">
+                            </div>
+                            <div
+                                class="absolute left-0 md:left-2 lg:left-4 top-24 md:top-32 w-4 h-4 rounded-full bg-white border-3 border-deep-purple">
+                            </div>
+                            <div
+                                class="absolute left-0 md:left-2 lg:left-4 bottom-6 w-4 h-4 rounded-full bg-white border-3 border-deep-purple">
+                            </div>
+                            <div class="space-y-6 md:space-y-8">
+                                <div>
+                                    <h4 class="font-roboto text-base md:text-xl font-bold mb-1 leading-8">Morning</h4>
+                                    <p class="font-roboto text-base md:text-xl leading-8">Arrive in Singapore. Transfer
+                                        from Airport to Hotel.</p>
+                                </div>
+                                <div>
+                                    <h4 class="font-roboto text-base md:text-xl font-bold mb-1 leading-8">Afternoon</h4>
+                                    <div class="font-roboto text-base md:text-xl leading-8">
+                                        <p>Check into your hotel.</p>
+                                        <p>Visit Marina Bay Sands Sky Park (2-3 hours).</p>
+                                        <p>Optional: Stroll along Marina Bay Waterfront Promenade or Helix Bridge.</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="font-roboto text-base md:text-xl font-bold mb-1 leading-8">Evening</h4>
+                                    <p class="font-roboto text-base md:text-xl leading-8">Explore Gardens by the Bay,
+                                        including Super Tree Grove (3-4 hours)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border-t border-muted-gray mt-8 md:mt-12"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class=" bg-white font-roboto px-4 md:px-8 lg:px-16 xl:px-24 py-8 md:py-12 lg:py-16" style="width: 100%; box-sizing: border-box; page-break-before: always; page-break-inside: avoid;">
+        <div class="max-w-[1400px] mx-auto" style="width: 100%; box-sizing: border-box;">
+            <section class="mb-12 md:mb-16" style="page-break-inside: avoid;">
+                <h1 class="text-3xl md:text-[34px] font-bold leading-8 mb-8 md:mb-12"><span class="text-black">Flight
+                    </span><span class="text-brand-purple">Summary</span></h1>
+                <div class="space-y-3 md:space-y-4 mb-6 md:mb-8" style="width: 100%; box-sizing: border-box;">
+                    <div
+                        class="grid grid-cols-1 md:grid-cols-[auto_1fr] gap-0 border border-brand-purple-dark rounded-lg overflow-hidden" style="width: 100%; box-sizing: border-box;">
+                        <div
+                            class="relative bg-brand-purple-light border-r border-brand-purple-dark px-6 md:px-10 py-4 md:py-5 flex items-center">
+                            <span class="text-xl md:text-[26px] font-normal leading-8 whitespace-nowrap">Thu 10
+                                Jan'24</span>
+                            <div class="hidden md:block absolute right-0 top-0 h-full w-8"><svg
+                                    class="absolute right-0 top-0 h-full" width="35" height="70" viewBox="0 0 35 70"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                                    <path d="M0 0L35 35L0 70V0Z" fill="#F9EEFF" stroke="#541C9C" stroke-width="1">
+                                    </path>
+                                </svg></div>
+                        </div>
+                        <div class="bg-white px-6 md:px-10 py-4 md:py-5 flex items-center">
+                            <p class="text-xl md:text-[26px] leading-8"><span class="font-bold">Fly Air India
+                                    (AX-123)</span> <span class="font-light">from Delhi (DEL) to Singapore (SIN).</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-base md:text-lg font-light leading-8 text-black">Note: All flights include meals, seat
+                    choice (excluding XL), and 20kg/25Kg checked baggage.</p>
+            </section>
+            <hr class="border-t border-divider my-8 md:my-12">
+            <section class="mb-12 md:mb-16" style="page-break-inside: avoid;">
+                <h2 class="text-3xl md:text-[34px] font-bold leading-8 mb-8 md:mb-12"><span
+                        class="text-black">Hotel</span><span class="text-brand-purple"> Bookings</span></h2>
+                <div id="hotel-bookings" class="overflow-x-auto -mx-4 md:mx-0" style="width: 100%; box-sizing: border-box; overflow: visible;">
+                    <div class="inline-block min-w-full align-middle px-4 md:px-0" style="width: 100%; box-sizing: border-box;">
+                        <div class="grid grid-cols-5 gap-2 md:gap-4 min-w-[800px]" style="width: 100%; box-sizing: border-box;">
+                            <div class="space-y-2 md:space-y-4">
+                                <div class="bg-deep-purple rounded-t-[45px] px-4 md:px-6 py-3 md:py-4 text-center">
+                                    <h3 class="text-lg md:text-[26px] font-medium leading-8 text-white">City</h3>
+                                </div>
+                                <div
+                                    class="bg-brand-purple-light rounded-b-[30px] px-4 md:px-6 py-8 md:py-10 space-y-10 md:space-y-14">
+                                    <p class="text-lg md:text-xl font-light leading-8 text-center">Singapore</p>
+
+                                </div>
+                            </div>
+                            <div class="space-y-2 md:space-y-4">
+                                <div class="bg-deep-purple rounded-t-[45px] px-4 md:px-6 py-3 md:py-4 text-center">
+                                    <h3 class="text-lg md:text-[26px] font-medium leading-8 text-white">Check In</h3>
+                                </div>
+                                <div
+                                    class="bg-brand-purple-light rounded-b-[30px] px-4 md:px-6 py-8 md:py-10 space-y-10 md:space-y-14">
+                                    <p class="text-lg md:text-xl font-light leading-8 text-center">24/02/2024</p>
+                                </div>
+                            </div>
+                            <div class="space-y-2 md:space-y-4">
+                                <div class="bg-deep-purple rounded-t-[45px] px-4 md:px-6 py-3 md:py-4 text-center">
+                                    <h3 class="text-lg md:text-[26px] font-medium leading-8 text-white">Check Out</h3>
+                                </div>
+                                <div
+                                    class="bg-brand-purple-light rounded-b-[30px] px-4 md:px-6 py-8 md:py-10 space-y-10 md:space-y-14">
+                                    <p class="text-lg md:text-xl font-light leading-8 text-center">24/02/2024</p>
+                                </div>
+                            </div>
+                            <div class="space-y-2 md:space-y-4">
+                                <div class="bg-deep-purple rounded-t-[45px] px-4 md:px-6 py-3 md:py-4 text-center">
+                                    <h3 class="text-lg md:text-[26px] font-medium leading-8 text-white">Nights</h3>
+                                </div>
+                                <div
+                                    class="bg-brand-purple-light rounded-b-[30px] px-4 md:px-6 py-8 md:py-10 space-y-10 md:space-y-14">
+                                    <p class="text-lg md:text-xl font-light leading-8 text-center">2</p>
+                                </div>
+                            </div>
+                            <div class="space-y-2 md:space-y-4">
+                                <div class="bg-deep-purple rounded-t-[45px] px-4 md:px-6 py-3 md:py-4 text-center">
+                                    <h3 class="text-lg md:text-[26px] font-medium leading-8 text-white">Hotel Name</h3>
+                                </div>
+                                <div
+                                    class="bg-brand-purple-light rounded-b-[30px] px-4 md:px-6 py-8 md:py-10 space-y-10 md:space-y-14">
+                                    <p class="text-base md:text-xl font-light leading-[25px] text-center">Super
+                                        Townhouse Oak Vashi formerly Blue Diamond</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-8 md:mt-10 space-y-1 md:space-y-0 text-base md:text-lg font-light leading-8">
+                    <p>1. All hotels are tentative and can be replaced with similar.</p>
+                    <p>2. Breakfast included for all hotel stays.</p>
+                    <p>3. All Hotels will be 4* and above category</p>
+                    <p>4. A maximum occupancy of 2 people/room is allowed in most hotels.</p>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div class=" bg-white py-8 px-4 sm:px-6 lg:px-8" style="width: 100%; box-sizing: border-box; page-break-before: always;">
+        <div class=" mx-auto" style="width: 100%; box-sizing: border-box;">
+            <section class="mb-16" style="page-break-inside: avoid;">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-8 sm:mb-14"><span class="text-black">Important</span><span
+                        class="text-brand-purple"> Notes</span></h2>
+                <div class="grid grid-cols-1 lg:grid-cols-[auto_1fr] gap-0">
+                    <div class="overflow-hidden rounded-t-[45px] lg:rounded-tr-none lg:rounded-l-[45px]">
+                        <div class="bg-deep-purple text-white text-center py-4 px-8">
+                            <h3 class="text-2xl font-medium">Point</h3>
+                        </div>
+                        <div class="bg-brand-purple-light">
+                            <div
+                                class="text-black text-center py-4 px-6 text-lg sm:text-xl min-h-[82px] flex items-center justify-center">
+                                Airlines Standard Policy</div>
+                            <div
+                                class="text-black text-center py-4 px-6 text-lg sm:text-xl min-h-[82px] flex items-center justify-center">
+                                Flight/Hotel Cancellation</div>
+                            <div
+                                class="text-black text-center py-4 px-6 text-lg sm:text-xl min-h-[82px] flex items-center justify-center">
+                                Trip Insurance</div>
+                            <div
+                                class="text-black text-center py-4 px-6 text-lg sm:text-xl min-h-[82px] flex items-center justify-center">
+                                Hotel Check-In &amp; Check Out</div>
+                            <div
+                                class="text-black text-center py-4 px-6 text-lg sm:text-xl min-h-[82px] flex items-center justify-center">
+                                Visa Rejection</div>
+                        </div>
+                        <div class="bg-brand-purple-light h-8 rounded-b-[30px] lg:rounded-br-none lg:rounded-bl-[30px]">
+                        </div>
+                    </div>
+                    <div class="overflow-hidden lg:rounded-r-[45px] rounded-b-[45px] lg:rounded-bl-none">
+                        <div class="bg-deep-purple text-white text-center py-4 px-8">
+                            <h3 class="text-2xl font-medium">Details</h3>
+                        </div>
+                        <div class="bg-brand-purple-light">
+                            <div
+                                class="text-black text-center py-4 px-6 text-lg sm:text-xl leading-[25px] min-h-[82px] flex items-center justify-center">
+                                In case of visa rejection, visa fees or any other non cancellable<br
+                                    class="hidden sm:inline"> component cannot be reimbursed at any cost.</div>
+                            <div
+                                class="text-black text-center py-4 px-6 text-lg sm:text-xl leading-[25px] min-h-[82px] flex items-center justify-center">
+                                In case of visa rejection, visa fees or any other non cancellable<br
+                                    class="hidden sm:inline"> component cannot be reimbursed at any cost.</div>
+                            <div
+                                class="text-black text-center py-4 px-6 text-lg sm:text-xl leading-[25px] min-h-[82px] flex items-center justify-center">
+                                In case of visa rejection, visa fees or any other non cancellable<br
+                                    class="hidden sm:inline"> component cannot be reimbursed at any cost.</div>
+                            <div
+                                class="text-black text-center py-4 px-6 text-lg sm:text-xl leading-[25px] min-h-[82px] flex items-center justify-center">
+                                In case of visa rejection, visa fees or any other non cancellable<br
+                                    class="hidden sm:inline"> component cannot be reimbursed at any cost.</div>
+                            <div
+                                class="text-black text-center py-4 px-6 text-lg sm:text-xl leading-[25px] min-h-[82px] flex items-center justify-center">
+                                In case of visa rejection, visa fees or any other non cancellable<br
+                                    class="hidden sm:inline"> component cannot be reimbursed at any cost.</div>
+                        </div>
+                        <div class="bg-brand-purple-light h-8 rounded-b-[30px]"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-8 sm:mb-14"><span class="text-black">Scope Of</span><span
+                        class="text-brand-purple"> Service</span></h2>
+                <div class="grid grid-cols-1 lg:grid-cols-[auto_1fr] gap-0">
+                    <div class="overflow-hidden rounded-t-[45px] lg:rounded-tr-none lg:rounded-l-[45px]">
+                        <div class="bg-deep-purple text-white text-center py-4 px-8">
+                            <h3 class="text-2xl font-medium">Service</h3>
+                        </div>
+                        <div class="bg-brand-purple-light">
+                            <div
+                                class="text-black text-center py-4 px-6 text-lg sm:text-xl min-h-[82px] flex items-center justify-center">
+                                Flight Tickets And Hotel Vouchers</div>
+                            <div
+                                class="text-black text-center py-4 px-6 text-lg sm:text-xl min-h-[82px] flex items-center justify-center">
+                                Web Check-In</div>
+                            <div
+                                class="text-black text-center py-4 px-6 text-lg sm:text-xl min-h-[82px] flex items-center justify-center">
+                                Support</div>
+                            <div
+                                class="text-black text-center py-4 px-6 text-lg sm:text-xl min-h-[82px] flex items-center justify-center">
+                                Cancellation Support</div>
+                            <div
+                                class="text-black text-center py-4 px-6 text-lg sm:text-xl min-h-[82px] flex items-center justify-center">
+                                Trip Support</div>
+                        </div>
+                        <div class="bg-brand-purple-light h-8 rounded-b-[30px] lg:rounded-br-none lg:rounded-bl-[30px]">
+                        </div>
+                    </div>
+                    <div class="overflow-hidden lg:rounded-r-[45px] rounded-b-[45px] lg:rounded-bl-none">
+                        <div class="bg-deep-purple text-white text-center py-4 px-8">
+                            <h3 class="text-2xl font-medium">Details</h3>
+                        </div>
+                        <div class="bg-brand-purple-light">
+                            <div
+                                class="text-black text-center py-4 px-6 text-lg sm:text-xl min-h-[82px] flex items-center justify-center">
+                                Delivered 3 Days Post Full Payment</div>
+                            <div
+                                class="text-black text-center py-4 px-6 text-lg sm:text-xl min-h-[82px] flex items-center justify-center">
+                                Boarding Pass Delivery Via Email/WhatsApp</div>
+                            <div
+                                class="text-black text-center py-4 px-6 text-lg sm:text-xl min-h-[82px] flex items-center justify-center">
+                                Chat Support – Response Time: 4 Hours</div>
+                            <div
+                                class="text-black text-center py-4 px-6 text-lg sm:text-xl min-h-[82px] flex items-center justify-center">
+                                Provided</div>
+                            <div
+                                class="text-black text-center py-4 px-6 text-lg sm:text-xl min-h-[82px] flex items-center justify-center">
+                                Response Time: 5 Minutes</div>
+                        </div>
+                        <div class="bg-brand-purple-light h-8 rounded-b-[30px]"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-8 sm:mb-14"><span class="text-black">Inclusion </span><span
+                        class="text-brand-purple">Summary</span></h2>
+                <div class="overflow-x-auto">
+                    <div class="min-w-[800px]">
+                        <div class="grid grid-cols-[1fr_auto_2fr_1.5fr] gap-0">
+                            <div class="overflow-hidden rounded-tl-[45px]">
+                                <div class="bg-deep-purple text-white text-center py-4 px-8">
+                                    <h3 class="text-2xl font-medium">Category</h3>
+                                </div>
+                                <div class="bg-brand-purple-light">
+                                    <div
+                                        class="text-black text-center py-4 px-6 text-lg sm:text-xl min-h-[70px] flex items-center justify-center">
+                                        Flight</div>
+                                    <div
+                                        class="text-black text-center py-4 px-6 text-lg sm:text-xl min-h-[70px] flex items-center justify-center">
+                                        Tourist Tax</div>
+                                    <div
+                                        class="text-black text-center py-4 px-6 text-lg sm:text-xl min-h-[70px] flex items-center justify-center">
+                                        Hotel</div>
+                                </div>
+                                <div class="bg-brand-purple-light h-8 rounded-bl-[30px]"></div>
+                            </div>
+                            <div class="overflow-hidden">
+                                <div class="bg-deep-purple text-white text-center py-4 px-8">
+                                    <h3 class="text-2xl font-medium">Count</h3>
+                                </div>
+                                <div class="bg-brand-purple-light">
+                                    <div
+                                        class="text-black text-center py-4 px-6 text-lg sm:text-xl min-h-[70px] flex items-center justify-center">
+                                        2</div>
+                                    <div
+                                        class="text-black text-center py-4 px-6 text-lg sm:text-xl min-h-[70px] flex items-center justify-center">
+                                        2</div>
+                                    <div
+                                        class="text-black text-center py-4 px-6 text-lg sm:text-xl min-h-[70px] flex items-center justify-center">
+                                        2</div>
+                                </div>
+                                <div class="bg-brand-purple-light h-8"></div>
+                            </div>
+                            <div class="overflow-hidden">
+                                <div class="bg-deep-purple text-white text-center py-4 px-8">
+                                    <h3 class="text-2xl font-medium">Details</h3>
+                                </div>
+                                <div class="bg-brand-purple-light">
+                                    <div
+                                        class="text-black text-center py-4 px-6 text-lg sm:text-xl min-h-[70px] flex items-center justify-center">
+                                        All Flights Mentioned</div>
+                                    <div
+                                        class="text-black text-center py-4 px-6 text-lg sm:text-xl min-h-[70px] flex items-center justify-center">
+                                        Yotel (Singapore), Oakwood (Sydney), Mercure (Cairns), Novotel (Gold Coast),
+                                        Holiday Inn (Melbourne)</div>
+                                    <div
+                                        class="text-black text-center py-4 px-6 text-lg sm:text-xl min-h-[70px] flex items-center justify-center">
+                                        Airport To Hotel - Hotel To Attractions - Day Trips If Any</div>
+                                </div>
+                                <div class="bg-brand-purple-light h-8"></div>
+                            </div>
+                            <div class="overflow-hidden rounded-tr-[45px]">
+                                <div class="bg-deep-purple text-white text-center py-4 px-6">
+                                    <h3 class="text-2xl font-medium">Status / Comments</h3>
+                                </div>
+                                <div class="bg-brand-purple-light">
+                                    <div
+                                        class="text-black text-center py-4 px-6 text-lg sm:text-xl min-h-[70px] flex items-center justify-center">
+                                        Awaiting Confirmation</div>
+                                    <div
+                                        class="text-black text-center py-4 px-6 text-lg sm:text-xl min-h-[70px] flex items-center justify-center">
+                                        Awaiting Confirmation</div>
+                                    <div
+                                        class="text-black text-center py-4 px-6 text-lg sm:text-xl min-h-[70px] flex items-center justify-center">
+                                        Included</div>
+                                </div>
+                                <div class="bg-brand-purple-light h-8 rounded-br-[30px]"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-12 pt-8">
+                    <h3 class="text-lg font-medium mb-2">Transfer Policy(Refundable Upon Claim)</h3>
+                    <p class="text-lg text-gray-700">If any transfer is delayed beyond 15 minutes, customers may book an
+                        app-based or radio taxi and claim a refund for that specific leg.</p>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div class=" bg-white">
+        <div class="container mx-auto px-4 py-8 md:py-12 ">
+            <h1 class="text-3xl md:text-[34px] font-bold leading-8 mb-8 md:mb-14"><span
+                    class="text-black">Activity</span> <span class="text-brand-purple">Table</span></h1>
+            <div class="overflow-x-auto">
+                <div class="inline-block min-w-full">
+                    <div
+                        class="grid grid-cols-[minmax(140px,177px)_minmax(300px,1fr)_minmax(180px,204px)_minmax(180px,251px)] gap-0 md:gap-4">
+                        <div class="flex flex-col">
+                            <div class="bg-deep-purple rounded-t-[45px] h-[61px] flex items-center justify-center">
+                                <h2 class="text-white text-xl md:text-[26px] font-normal capitalize">City</h2>
+                            </div>
+                            <div class="bg-brand-purple-light rounded-b-[30px] flex-1">
+                                <div
+                                    class="px-4 md:px-6 py-3 md:py-4 text-black text-base md:text-xl font-normal leading-8 capitalize">
+                                    Rio De Janeiro</div>
+                                <div
+                                    class="px-4 md:px-6 py-3 md:py-4 text-black text-base md:text-xl font-normal leading-8 capitalize">
+                                    Rio De Janeiro</div>
+                                <div
+                                    class="px-4 md:px-6 py-3 md:py-4 text-black text-base md:text-xl font-normal leading-8 capitalize">
+                                    Rio De Janeiro</div>
+                                <div
+                                    class="px-4 md:px-6 py-3 md:py-4 text-black text-base md:text-xl font-normal leading-8 capitalize">
+                                    Rio De Janeiro</div>
+                                <div
+                                    class="px-4 md:px-6 py-3 md:py-4 text-black text-base md:text-xl font-normal leading-8 capitalize">
+                                    Rio De Janeiro</div>
+                                <div
+                                    class="px-4 md:px-6 py-3 md:py-4 text-black text-base md:text-xl font-normal leading-8 capitalize">
+                                    Rio De Janeiro</div>
+                                <div
+                                    class="px-4 md:px-6 py-3 md:py-4 text-black text-base md:text-xl font-normal leading-8 capitalize">
+                                    Rio De Janeiro</div>
+                                <div
+                                    class="px-4 md:px-6 py-3 md:py-4 text-black text-base md:text-xl font-normal leading-8 capitalize">
+                                    Rio De Janeiro</div>
+                                <div
+                                    class="px-4 md:px-6 py-3 md:py-4 text-black text-base md:text-xl font-normal leading-8 capitalize">
+                                    Rio De Janeiro</div>
+                                <div
+                                    class="px-4 md:px-6 py-3 md:py-4 text-black text-base md:text-xl font-normal leading-8 capitalize">
+                                    Rio De Janeiro</div>
+                                <div
+                                    class="px-4 md:px-6 py-3 md:py-4 text-black text-base md:text-xl font-normal leading-8 capitalize">
+                                    Rio De Janeiro</div>
+                                <div
+                                    class="px-4 md:px-6 py-3 md:py-4 text-black text-base md:text-xl font-normal leading-8 capitalize">
+                                    Rio De Janeiro</div>
+                                <div
+                                    class="px-4 md:px-6 py-3 md:py-4 text-black text-base md:text-xl font-normal leading-8 capitalize">
+                                    Rio De Janeiro</div>
+                                <div
+                                    class="px-4 md:px-6 py-3 md:py-4 text-black text-base md:text-xl font-normal leading-8 capitalize">
+                                    Rio De Janeiro</div>
+                                <div
+                                    class="px-4 md:px-6 py-3 md:py-4 text-black text-base md:text-xl font-normal leading-8 capitalize">
+                                    Rio De Janeiro</div>
+                                <div
+                                    class="px-4 md:px-6 py-3 md:py-4 text-black text-base md:text-xl font-normal leading-8 capitalize">
+                                    Rio De Janeiro</div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col">
+                            <div class="bg-deep-purple rounded-t-[45px] h-[61px] flex items-center justify-center">
+                                <h2 class="text-white text-xl md:text-[26px] font-normal capitalize">Activity</h2>
+                            </div>
+                            <div class="bg-brand-purple-light rounded-b-[30px] flex-1">
+                                <div
+                                    class="px-4 md:px-20 py-3 md:py-4 text-black text-base md:text-xl font-normal leading-8 capitalize">
+                                    Sydney Harbour Cruise &amp; Taronga Zoo</div>
+                                <div
+                                    class="px-4 md:px-20 py-3 md:py-4 text-black text-base md:text-xl font-normal leading-8 capitalize">
+                                    Sydney Harbour Cruise &amp; Taronga Zoo</div>
+                                <div
+                                    class="px-4 md:px-20 py-3 md:py-4 text-black text-base md:text-xl font-normal leading-8 capitalize">
+                                    Sydney Harbour Cruise &amp; Taronga Zoo</div>
+                                <div
+                                    class="px-4 md:px-20 py-3 md:py-4 text-black text-base md:text-xl font-normal leading-8 capitalize">
+                                    Sydney Harbour Cruise &amp; Taronga Zoo</div>
+                                <div
+                                    class="px-4 md:px-20 py-3 md:py-4 text-black text-base md:text-xl font-normal leading-8 capitalize">
+                                    Sydney Harbour Cruise &amp; Taronga Zoo</div>
+                                <div
+                                    class="px-4 md:px-20 py-3 md:py-4 text-black text-base md:text-xl font-normal leading-8 capitalize">
+                                    Sydney Harbour Cruise &amp; Taronga Zoo</div>
+                                <div
+                                    class="px-4 md:px-20 py-3 md:py-4 text-black text-base md:text-xl font-normal leading-8 capitalize">
+                                    Sydney Harbour Cruise &amp; Taronga Zoo</div>
+                                <div
+                                    class="px-4 md:px-20 py-3 md:py-4 text-black text-base md:text-xl font-normal leading-8 capitalize">
+                                    Sydney Harbour Cruise &amp; Taronga Zoo</div>
+                                <div
+                                    class="px-4 md:px-20 py-3 md:py-4 text-black text-base md:text-xl font-normal leading-8 capitalize">
+                                    Sydney Harbour Cruise &amp; Taronga Zoo</div>
+                                <div
+                                    class="px-4 md:px-20 py-3 md:py-4 text-black text-base md:text-xl font-normal leading-8 capitalize">
+                                    Sydney Harbour Cruise &amp; Taronga Zoo</div>
+                                <div
+                                    class="px-4 md:px-20 py-3 md:py-4 text-black text-base md:text-xl font-normal leading-8 capitalize">
+                                    Sydney Harbour Cruise &amp; Taronga Zoo</div>
+                                <div
+                                    class="px-4 md:px-20 py-3 md:py-4 text-black text-base md:text-xl font-normal leading-8 capitalize">
+                                    Sydney Harbour Cruise &amp; Taronga Zoo</div>
+                                <div
+                                    class="px-4 md:px-20 py-3 md:py-4 text-black text-base md:text-xl font-normal leading-8 capitalize">
+                                    Sydney Harbour Cruise &amp; Taronga Zoo</div>
+                                <div
+                                    class="px-4 md:px-20 py-3 md:py-4 text-black text-base md:text-xl font-normal leading-8 capitalize">
+                                    Sydney Harbour Cruise &amp; Taronga Zoo</div>
+                                <div
+                                    class="px-4 md:px-20 py-3 md:py-4 text-black text-base md:text-xl font-normal leading-8 capitalize">
+                                    Sydney Harbour Cruise &amp; Taronga Zoo</div>
+                                <div
+                                    class="px-4 md:px-20 py-3 md:py-4 text-black text-base md:text-xl font-normal leading-8 capitalize">
+                                    Sydney Harbour Cruise &amp; Taronga Zoo</div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col">
+                            <div class="bg-deep-purple rounded-t-[45px] h-[61px] flex items-center justify-center">
+                                <h2 class="text-white text-xl md:text-[26px] font-normal capitalize">Type</h2>
+                            </div>
+                            <div class="bg-brand-purple-light rounded-b-[30px] flex-1">
+                                <div
+                                    class="px-4 py-3 md:py-4 text-black text-base md:text-xl font-normal leading-8 capitalize">
+                                    Nature/Sightseeing</div>
+                                <div
+                                    class="px-4 py-3 md:py-4 text-black text-base md:text-xl font-normal leading-8 capitalize">
+                                    Airlines Standard</div>
+                                <div
+                                    class="px-4 py-3 md:py-4 text-black text-base md:text-xl font-normal leading-8 capitalize">
+                                    Airlines Standard</div>
+                                <div
+                                    class="px-4 py-3 md:py-4 text-black text-base md:text-xl font-normal leading-8 capitalize">
+                                    Airlines Standard</div>
+                                <div
+                                    class="px-4 py-3 md:py-4 text-black text-base md:text-xl font-normal leading-8 capitalize">
+                                    Airlines Standard</div>
+                                <div
+                                    class="px-4 py-3 md:py-4 text-black text-base md:text-xl font-normal leading-8 capitalize">
+                                    Airlines Standard</div>
+                                <div
+                                    class="px-4 py-3 md:py-4 text-black text-base md:text-xl font-normal leading-8 capitalize">
+                                    Airlines Standard</div>
+                                <div
+                                    class="px-4 py-3 md:py-4 text-black text-base md:text-xl font-normal leading-8 capitalize">
+                                    Airlines Standard</div>
+                                <div
+                                    class="px-4 py-3 md:py-4 text-black text-base md:text-xl font-normal leading-8 capitalize">
+                                    Airlines Standard</div>
+                                <div
+                                    class="px-4 py-3 md:py-4 text-black text-base md:text-xl font-normal leading-8 capitalize">
+                                    Airlines Standard</div>
+                                <div
+                                    class="px-4 py-3 md:py-4 text-black text-base md:text-xl font-normal leading-8 capitalize">
+                                    Airlines Standard</div>
+                                <div
+                                    class="px-4 py-3 md:py-4 text-black text-base md:text-xl font-normal leading-8 capitalize">
+                                    Airlines Standard</div>
+                                <div
+                                    class="px-4 py-3 md:py-4 text-black text-base md:text-xl font-normal leading-8 capitalize">
+                                    Airlines Standard</div>
+                                <div
+                                    class="px-4 py-3 md:py-4 text-black text-base md:text-xl font-normal leading-8 capitalize">
+                                    Airlines Standard</div>
+                                <div
+                                    class="px-4 py-3 md:py-4 text-black text-base md:text-xl font-normal leading-8 capitalize">
+                                    Airlines Standard</div>
+                                <div
+                                    class="px-4 py-3 md:py-4 text-black text-base md:text-xl font-normal leading-8 capitalize">
+                                    Airlines Standard</div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col">
+                            <div class="bg-deep-purple rounded-t-[45px] h-[61px] flex items-center justify-center">
+                                <h2 class="text-white text-xl md:text-[26px] font-normal text-center capitalize">Time
+                                    Required</h2>
+                            </div>
+                            <div class="bg-brand-purple-light rounded-b-[30px] flex-1">
+                                <div
+                                    class="px-4 py-3 md:py-4 text-black text-base md:text-xl font-normal leading-8 text-center capitalize">
+                                    2-3 Hours</div>
+                                <div
+                                    class="px-4 py-3 md:py-4 text-black text-base md:text-xl font-normal leading-8 text-center capitalize">
+                                    2-3 Hours</div>
+                                <div
+                                    class="px-4 py-3 md:py-4 text-black text-base md:text-xl font-normal leading-8 text-center capitalize">
+                                    2-3 Hours</div>
+                                <div
+                                    class="px-4 py-3 md:py-4 text-black text-base md:text-xl font-normal leading-8 text-center capitalize">
+                                    2-3 Hours</div>
+                                <div
+                                    class="px-4 py-3 md:py-4 text-black text-base md:text-xl font-normal leading-8 text-center capitalize">
+                                    2-3 Hours</div>
+                                <div
+                                    class="px-4 py-3 md:py-4 text-black text-base md:text-xl font-normal leading-8 text-center capitalize">
+                                    2-3 Hours</div>
+                                <div
+                                    class="px-4 py-3 md:py-4 text-black text-base md:text-xl font-normal leading-8 text-center capitalize">
+                                    2-3 Hours</div>
+                                <div
+                                    class="px-4 py-3 md:py-4 text-black text-base md:text-xl font-normal leading-8 text-center capitalize">
+                                    2-3 Hours</div>
+                                <div
+                                    class="px-4 py-3 md:py-4 text-black text-base md:text-xl font-normal leading-8 text-center capitalize">
+                                    2-3 Hours</div>
+                                <div
+                                    class="px-4 py-3 md:py-4 text-black text-base md:text-xl font-normal leading-8 text-center capitalize">
+                                    2-3 Hours</div>
+                                <div
+                                    class="px-4 py-3 md:py-4 text-black text-base md:text-xl font-normal leading-8 text-center capitalize">
+                                    2-3 Hours</div>
+                                <div
+                                    class="px-4 py-3 md:py-4 text-black text-base md:text-xl font-normal leading-8 text-center capitalize">
+                                    2-3 Hours</div>
+                                <div
+                                    class="px-4 py-3 md:py-4 text-black text-base md:text-xl font-normal leading-8 text-center capitalize">
+                                    2-3 Hours</div>
+                                <div
+                                    class="px-4 py-3 md:py-4 text-black text-base md:text-xl font-normal leading-8 text-center capitalize">
+                                    2-3 Hours</div>
+                                <div
+                                    class="px-4 py-3 md:py-4 text-black text-base md:text-xl font-normal leading-8 text-center capitalize">
+                                    2-3 Hours</div>
+                                <div
+                                    class="px-4 py-3 md:py-4 text-black text-base md:text-xl font-normal leading-8 text-center capitalize">
+                                    2-3 Hours</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 md:mt-16">
+                <h2 class="text-3xl md:text-[34px] font-bold leading-8 mb-4 md:mb-6"><span class="text-black">Terms and
+                    </span><span class="text-brand-purple">Conditions</span></h2><a href="#"
+                    class="text-brand-blue text-xl md:text-[26px] font-normal underline leading-8">View all terms and
+                    conditions</a>
+            </div>
+            <hr class="border-t border-[#777777] my-8 md:my-10">
+
+        </div>
+    </div>
+    <div class=" bg-white font-roboto">
+        <div class="max-w-[1300px] mx-auto px-4 sm:px-6 lg:px-12 py-8 sm:py-12 lg:py-16">
+            <section class="mb-12 lg:mb-16">
+                <h1 class="text-2xl sm:text-3xl lg:text-[34px] font-bold leading-8 capitalize mb-6 sm:mb-8 lg:mb-12">
+                    <span class="text-black">Payment </span><span class="text-brand-purple">Plan</span></h1>
+                <div class="space-y-4 mb-8 sm:mb-12 lg:mb-16">
+                    <div
+                        class="relative flex items-center border border-brand-purple-border rounded-lg overflow-hidden">
+                        <div
+                            class="bg-brand-purple-light border-r border-brand-purple-border px-6 sm:px-8 lg:px-12 py-4 sm:py-5 min-w-[200px] sm:min-w-[280px] lg:min-w-[314px] relative">
+                            <div
+                                class="absolute right-0 top-0 bottom-0 w-12 bg-brand-purple-light border-l border-brand-purple-border transform skew-x-[-20deg] translate-x-6">
+                            </div><span
+                                class="text-lg sm:text-xl lg:text-[26px] leading-8 capitalize relative z-10">Total
+                                Amount</span>
+                        </div>
+                        <div class="flex-1 px-6 sm:px-8 lg:px-12 py-4 sm:py-5 bg-white"><span
+                                class="text-lg sm:text-xl lg:text-[26px] leading-8"><span class="font-bold">₹
+                                    9,00,000</span><span class="font-normal"> For 3 Pax (Inclusive Of GST)</span></span>
+                        </div>
+                    </div>
+                    <div
+                        class="relative flex items-center border border-brand-purple-border rounded-lg overflow-hidden">
+                        <div
+                            class="bg-brand-purple-light border-r border-brand-purple-border px-6 sm:px-8 lg:px-12 py-4 sm:py-5 min-w-[200px] sm:min-w-[280px] lg:min-w-[314px] relative">
+                            <div
+                                class="absolute right-0 top-0 bottom-0 w-12 bg-brand-purple-light border-l border-brand-purple-border transform skew-x-[-20deg] translate-x-6">
+                            </div><span
+                                class="text-lg sm:text-xl lg:text-[26px] leading-8 capitalize relative z-10">TCS</span>
+                        </div>
+                        <div class="flex-1 px-6 sm:px-8 lg:px-12 py-4 sm:py-5 bg-white"><span
+                                class="text-lg sm:text-xl lg:text-[26px] leading-8 capitalize">Not Collected</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6">
+                    <div class="flex flex-col">
+                        <div class="bg-deep-purple rounded-t-[45px] px-6 py-4 text-center">
+                            <h3 class="text-xl sm:text-2xl lg:text-[26px] text-white leading-8 capitalize">Installment
+                            </h3>
+                        </div>
+                        <div class="bg-brand-purple-light rounded-b-[30px] flex-1 px-6 py-8 space-y-8 lg:space-y-12">
+                            <p class="text-center text-lg sm:text-xl lg:text-[20px] leading-8 capitalize">Installment 1
+                            </p>
+                            <p class="text-center text-lg sm:text-xl lg:text-[20px] leading-8 capitalize">Installment 2
+                            </p>
+                            <p class="text-center text-lg sm:text-xl lg:text-[20px] leading-8 capitalize">Installment 3
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col">
+                        <div class="bg-deep-purple rounded-t-[45px] px-6 py-4 text-center">
+                            <h3 class="text-xl sm:text-2xl lg:text-[26px] text-white leading-8 capitalize">Amount</h3>
+                        </div>
+                        <div class="bg-brand-purple-light rounded-b-[30px] flex-1 px-6 py-8 space-y-8 lg:space-y-12">
+                            <p class="text-center text-lg sm:text-xl lg:text-[20px] leading-8 capitalize">₹3,50,000</p>
+                            <p class="text-center text-lg sm:text-xl lg:text-[20px] leading-8 capitalize">₹4,00,000</p>
+                            <p class="text-center text-lg sm:text-xl lg:text-[20px] leading-8 capitalize">Remaining</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col">
+                        <div class="bg-deep-purple rounded-t-[45px] px-6 py-4 text-center">
+                            <h3 class="text-xl sm:text-2xl lg:text-[26px] text-white leading-8 capitalize">Due Date</h3>
+                        </div>
+                        <div class="bg-brand-purple-light rounded-b-[30px] flex-1 px-6 py-8 space-y-8 lg:space-y-12">
+                            <p class="text-center text-lg sm:text-xl lg:text-[20px] leading-8 capitalize">Initial
+                                Payment</p>
+                            <p class="text-center text-lg sm:text-xl lg:text-[20px] leading-8 capitalize">Post Visa
+                                Approval</p>
+                            <p class="text-center text-lg sm:text-xl lg:text-[20px] leading-8 capitalize">20 Days Before
+                                Departure</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="border-t border-brand-gray my-8 sm:my-12 lg:my-16"></div>
+            <section class="mb-12 lg:mb-16">
+                <h2 class="text-2xl sm:text-3xl lg:text-[34px] font-bold leading-8 capitalize mb-6 sm:mb-8 lg:mb-12">
+                    <span class="text-black">Visa</span><span class="text-brand-purple"> Details</span></h2>
+                <div class="border border-brand-purple-border rounded-[30px] px-6 sm:px-12 lg:px-16 py-6 sm:py-8">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-12">
+                        <div>
+                            <p class="text-lg sm:text-xl lg:text-[26px] leading-8 capitalize"><span
+                                    class="font-bold">Visa Type :</span><br><span class="font-normal">123456</span></p>
+                        </div>
+                        <div>
+                            <p class="text-lg sm:text-xl lg:text-[26px] leading-8 capitalize"><span
+                                    class="font-bold">Validity:</span><br><span class="font-normal">123456</span></p>
+                        </div>
+                        <div class="sm:col-span-2 lg:col-span-1">
+                            <p class="text-lg sm:text-xl lg:text-[26px] leading-8 capitalize"><span
+                                    class="font-bold">Processing Date :</span><br><span
+                                    class="font-normal">123456</span></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="text-center py-8 sm:py-12">
+                <h3
+                    class="font-red-hat text-3xl sm:text-4xl lg:text-[48px] font-medium text-brand-purple-dark tracking-[0.72px] mb-8 sm:mb-10 lg:mb-12">
+                    PLAN.PACK.GO!</h3><button
+                    class="bg-brand-purple-border hover:bg-brand-purple transition-colors text-white font-bold text-xl sm:text-2xl lg:text-[26px] leading-[27px] px-12 sm:px-16 lg:px-20 py-5 sm:py-6 rounded-[52px] shadow-lg hover:shadow-xl">Book
+                    Now</button>
+            </section>
+            <div class="border-t border-brand-gray my-8 sm:my-12 lg:my-16"></div>
+
+        </div>
+    </div>
+</body>
+
+</html>
